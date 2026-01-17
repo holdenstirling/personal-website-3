@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holden Ottolini - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Fira+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #ffffff;
+            --text-primary: #2c2c2c;
+            --text-secondary: #666666;
+            --accent-warm: #d4a574;
+            --accent-cool: #7ba7bc;
+            --border-color: #e5e5e5;
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Fira Sans', sans-serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-primary);
+            line-height: 1.6;
+            background: var(--primary-light);
+        }
+        nav {
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-warm);
+        }
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+        .hero h1 {
+            font-family: var(--font-serif);
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        .hero p {
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+        .button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--accent-warm);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin: 0.5rem;
+            transition: transform 0.3s;
+        }
+        .button:hover {
+            transform: translateY(-2px);
+        }
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .blog-card {
+            background: white;
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        .blog-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .blog-card h3 {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        .blog-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        .blog-card a {
+            color: var(--accent-warm);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        footer {
+            background: var(--primary-dark);
+            color: var(--primary-light);
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">Holden Ottolini</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div>
+            <h1>Holden Stirling Ottolini</h1>
+            <p>Co-Founder & COO at Arc4 | Yext Expert | Multi-Location Strategy</p>
+            <a href="work.html" class="button">View My Work</a>
+            <a href="skills.html" class="button">My Skills</a>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Recent Blog Posts</h2>
+        <div class="blog-grid">
+            <div class="blog-card">
+                <h3>Local Landing Pages for Multi-Location Brands</h3>
+                <p>After building local pages for brands with 50-500+ locations, here's what separates the winners...</p>
+                <a href="blog-local-landing-pages.html">Read More →</a>
+            </div>
+            <div class="blog-card">
+                <h3>Hidden Costs of Bad Website Architecture</h3>
+                <p>That $2M website that doesn't work. How bad architecture costs enterprises $300K+ annually...</p>
+                <a href="blog-website-architecture.html">Read More →</a>
+            </div>
+            <div class="blog-card">
+                <h3>90 Days Away: Solo Travel Reflections</h3>
+                <p>After three months on the road, the real "destination" isn't a place—it's the mindset shift...</p>
+                <a href="blog-90-days-solo-travel.html">Read More →</a>
+            </div>
+            <div class="blog-card">
+                <h3>89 Days in Europe</h3>
+                <p>I left Denver with everything in storage and a one-way flight to Portugal. What I learned...</p>
+                <a href="blog-89-days-europe.html">Read More →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Holden Ottolini. All rights reserved.</p>
+    </footer>
+</body>
+</html>
