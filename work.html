@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>My Work & Projects - Your Name | Portfolio</title>
+    <meta name="description" content="Explore my portfolio of projects in AI, digital marketing, SEO/GEO consultancy, website architecture, and system integrations. View case studies and results.">
+    <meta name="keywords" content="portfolio, projects, AI, digital marketing, SEO, GEO, website architecture, systems integration, your name">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com/work.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/work.html">
+    <meta property="og:title" content="My Work & Projects - Your Name">
+    <meta property="og:description" content="Explore my portfolio of projects in AI, digital marketing, and system architecture.">
+    <meta property="og:image" content="https://yourwebsite.com/images/work-og.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Work & Projects - Your Name">
+    <meta name="twitter:description" content="Portfolio of AI, digital marketing, and technical projects.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Fira+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #f8f7f4;
+            --accent-warm: #d4a574;
+            --accent-cool: #6b8e9e;
+            --text-primary: #2d2d2d;
+            --text-secondary: #666666;
+            --border-color: #e0ddd8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--primary-light);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(248, 247, 244, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-warm);
+        }
+
+        /* Hero Section */
+        .work-hero {
+            padding: 10rem 3rem 5rem;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .work-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .work-hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 3rem;
+        }
+
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 4rem;
+        }
+
+        .filter-btn {
+            padding: 0.75rem 1.75rem;
+            background: white;
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--primary-dark);
+            color: white;
+            border-color: var(--primary-dark);
+        }
+
+        /* Projects Grid */
+        .projects-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem 5rem;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+
+        .project-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-warm);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 300px;
+            background: linear-gradient(135deg, var(--accent-cool), var(--accent-warm));
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-tags {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .project-tag {
+            padding: 0.4rem 0.8rem;
+            background: rgba(255, 255, 255, 0.95);
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-dark);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .project-content {
+            padding: 2rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .project-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex: 1;
+        }
+
+        .project-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent-warm);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .project-technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tech-tag {
+            padding: 0.35rem 0.75rem;
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .project-link {
+            flex: 1;
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .link-primary {
+            background: var(--primary-dark);
+            color: white;
+            border: 2px solid var(--primary-dark);
+        }
+
+        .link-primary:hover {
+            background: transparent;
+            color: var(--primary-dark);
+        }
+
+        .link-secondary {
+            background: transparent;
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+        }
+
+        .link-secondary:hover {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--primary-dark);
+            color: white;
+            padding: 5rem 3rem;
+            text-align: center;
+        }
+
+        .stats-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-box {
+            padding: 2rem;
+        }
+
+        .stat-box .stat-number {
+            font-size: 3.5rem;
+            color: var(--accent-warm);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-box .stat-label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 5rem 3rem;
+            text-align: center;
+            background: white;
+        }
+
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .cta-section p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.25rem 3rem;
+            background: var(--primary-dark);
+            color: white;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 500;
+            border: 2px solid var(--primary-dark);
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--primary-dark);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 2rem 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .work-hero {
+                padding-top: 8rem;
+            }
+
+            .project-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav role="navigation">
+        <div class="container">
+            <a href="index.html" class="logo">Your Name</a>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="work.html" class="active">Work</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="work-hero">
+        <h1>My Work & Projects</h1>
+        <p>
+            A curated selection of projects showcasing my expertise in AI, digital marketing, 
+            SEO/GEO consultancy, website architecture, and systems integration. Each project 
+            represents a unique challenge and solution.
+        </p>
+    </section>
+
+    <!-- Filter Buttons -->
+    <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="ai">AI</button>
+        <button class="filter-btn" data-filter="seo">SEO/GEO</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="marketing">Digital Marketing</button>
+        <button class="filter-btn" data-filter="integrations">Integrations</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <main class="projects-container">
+        <div class="projects-grid">
+            
+            <!-- Project 1: AI Implementation -->
+            <article class="project-card" data-category="ai">
+                <div class="project-image">
+                    <img src="images/projects/ai-project.jpg" alt="AI chatbot implementation dashboard" width="400" height="300">
+                    <div class="project-tags">
+                        <span class="project-tag">AI</span>
+                        <span class="project-tag">Automation</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>AI-Powered Customer Service Platform</h3>
+                    <p class="project-description">
+                        Developed and implemented an AI chatbot system that reduced customer service 
+                        response time by 70% and increased customer satisfaction scores by 40%. 
+                        Integrated with existing CRM and support systems.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">70%</div>
+                            <div class="stat-label">Faster Response</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">40%</div>
+                            <div class="stat-label">Higher CSAT</div>
+                        </div>
+                    </div>
+                    <div class="project-technologies">
+                        <span class="tech-tag">GPT-4</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LangChain</span>
+                        <span class="tech-tag">Zendesk API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link link-primary">Case Study</a>
+                        <a href="#" class="project-link link-secondary">Learn More</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: SEO/GEO -->
+            <article class="project-card" data-category="seo">
+                <div class="project-image">
+                    <img src="images/projects/seo-project.jpg" alt="SEO analytics dashboard showing traffic growth" width="400" height="300">
+                    <div class="project-tags">
+                        <span class="project-tag">SEO</span>
+                        <span class="project-tag">Strategy</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Enterprise SEO Transformation</h3>
+                    <p class="project-description">
+                        Led comprehensive SEO overhaul for e-commerce platform, implementing technical 
+                        SEO, content strategy, and local SEO optimization. Achieved 300% increase in 
+                        organic traffic within 12 months and doubled conversion rates.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">300%</div>
+                            <div class="stat-label">Traffic Growth</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2x</div>
+                            <div class="stat-label">Conversions</div>
+                        </div>
+                    </div>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Technical SEO</span>
+                        <span class="tech-tag">Schema Markup</span>
+                        <span class="tech-tag">Google Analytics</span>
+                        <span class="tech-tag">Search Console</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link link-primary">Case Study</a>
+                        <a href="#" class="project-link link-secondary">Results</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Website Architecture -->
+            <article class="project-card" data-category="architecture">
+                <div class="project-image">
+                    <img src="images/projects/architecture-project.jpg" alt="System architecture diagram" width="400" height="300">
+                    <div class="project-tags">
+                        <span class="project-tag">Architecture</span>
+                        <span class="project-tag">Systems</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Scalable SaaS Platform Architecture</h3>
+                    <p class="project-description">
+                        Designed and built microservices architecture for SaaS platform serving 
+                        100,000+ users. Implemented CI/CD pipelines, monitoring, and auto-scaling. 
+                        Reduced infrastructure costs by 45% while improving performance.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">100K+</div>
+                            <div class="stat-label">Users</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">45%</div>
+                            <div class="stat-label">Cost Savings</div>
+                        </div>
+                    </div>
+                    <div class="project-technologies">
+                        <span class="tech-tag">AWS</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link link-primary">Technical Details</a>
+                        <a href="#" class="project-link link-secondary">Architecture</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4: Digital Marketing -->
+            <article class="project-card" data-category="marketing">
+                <div class="project-image">
+                    <img src="images/projects/marketing-project.jpg" alt="Digital marketing campaign dashboard" width="400" height="300">
+                    <div class="project-tags">
+                        <span class="project-tag">Marketing</span>
+                        <span class="project-tag">Growth</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Multi-Channel Marketing Campaign</h3>
+                    <p class="project-description">
+                        Orchestrated integrated marketing campaign across email, social media, and 
+                        paid search. Implemented marketing automation, A/B testing, and attribution 
+                        modeling. Generated $2M in revenue with 450% ROI.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">$2M</div>
+                            <div class="stat-label">Revenue</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">450%</div>
+                            <div class="stat-label">ROI</div>
+                        </div>
+                    </div>
+                    <div class="project-technologies">
+                        <span class="tech-tag">HubSpot</span>
+                        <span class="tech-tag">Google Ads</span>
+                        <span class="tech-tag">Facebook Ads</span>
+                        <span class="tech-tag">Mailchimp</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link link-primary">Case Study</a>
+                        <a href="#" class="project-link link-secondary">Strategy</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 5: Integrations -->
+            <article class="project-card" data-category="integrations">
+                <div class="project-image">
+                    <img src="images/projects/integration-project.jpg" alt="System integration workflow diagram" width="400" height="300">
+                    <div class="project-tags">
+                        <span class="project-tag">Integrations</span>
+                        <span class="project-tag">APIs</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>Enterprise System Integration Hub</h3>
+                    <p class="project-description">
+                        Built custom integration platform connecting 15+ business systems including 
+                        CRM, ERP, marketing automation, and analytics tools. Automated 50+ manual 
+                        processes and eliminated data silos across organization.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Systems</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Automations</div>
+                        </div>
+                    </div>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Zapier</span>
+                        <span class="tech-tag">REST APIs</span>
+                        <span class="tech-tag">Webhooks</span>
+                        <span class="tech-tag">Node.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link link-primary">Technical Deep Dive</a>
+                        <a href="#" class="project-link link-secondary">Architecture</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 6: Combined -->
+            <article class="project-card" data-category="ai seo">
+                <div class="project-image">
+                    <img src="images/projects/combined-project.jpg" alt="AI-powered SEO tool interface" width="400" height="300">
+                    <div class="project-tags">
+                        <span class="project-tag">AI</span>
+                        <span class="project-tag">SEO</span>
+                    </div>
+                </div>
+                <div class="project-content">
+                    <h3>AI-Driven Content Optimization Tool</h3>
+                    <p class="project-description">
+                        Developed proprietary AI tool for content optimization combining NLP, 
+                        competitive analysis, and search intent modeling. Helped 50+ clients 
+                        achieve first-page rankings for target keywords.
+                    </p>
+                    <div class="project-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Clients</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">85%</div>
+                            <div class="stat-label">Page 1 Rate</div>
+                        </div>
+                    </div>
+                    <div class="project-technologies">
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">SEO APIs</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link link-primary">View Tool</a>
+                        <a href="#" class="project-link link-secondary">How It Works</a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-box">
+                <div class="stat-number">50+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">30+</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Years Experience</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-number">$10M+</div>
+                <div class="stat-label">Revenue Generated</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Let's Work Together</h2>
+        <p>
+            Have a project in mind? I'm always interested in tackling new challenges 
+            and creating innovative solutions. Let's discuss how I can help.
+        </p>
+        <a href="index.html#contact" class="cta-button">Get In Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+    <!-- Filter Script -->
+    <script>
+        // Project filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const filter = button.getAttribute('data-filter');
+                
+                // Update active button
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                
+                // Filter projects
+                projectCards.forEach(card => {
+                    const categories = card.getAttribute('data-category');
+                    
+                    if (filter === 'all' || categories.includes(filter)) {
+                        card.style.display = 'flex';
+                        card.style.animation = 'fadeIn 0.5s ease-in';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Fade in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

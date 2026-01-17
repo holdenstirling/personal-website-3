@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>Skills & Interests - Your Name | Professional & Personal</title>
+    <meta name="description" content="Explore my professional expertise in AI, SEO/GEO consultancy, digital marketing, and systems architecture, plus personal interests in triathlons, mountaineering, skiing, and hiking.">
+    <meta name="keywords" content="AI, SEO, GEO, digital marketing, website architecture, integrations, triathlon, mountaineering, skiing, hiking, your name">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourwebsite.com/skills.html">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourwebsite.com/skills.html">
+    <meta property="og:title" content="Skills & Interests - Your Name">
+    <meta property="og:description" content="Professional expertise and personal passions that drive my work and life.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=Fira+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-dark: #1a1a1a;
+            --primary-light: #f8f7f4;
+            --accent-warm: #d4a574;
+            --accent-cool: #6b8e9e;
+            --text-primary: #2d2d2d;
+            --text-secondary: #666666;
+            --border-color: #e0ddd8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Fira Sans', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--primary-light);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(248, 247, 244, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            font-weight: 600;
+            text-decoration: none;
+            color: var(--primary-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-warm);
+        }
+
+        /* Hero */
+        .skills-hero {
+            padding: 10rem 3rem 3rem;
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .skills-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--primary-dark);
+        }
+
+        .skills-hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Tab Navigation */
+        .tab-navigation {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin: 3rem auto;
+            max-width: 600px;
+            border: 2px solid var(--primary-dark);
+        }
+
+        .tab-btn {
+            flex: 1;
+            padding: 1rem 2rem;
+            background: transparent;
+            border: none;
+            color: var(--primary-dark);
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-right: 2px solid var(--primary-dark);
+        }
+
+        .tab-btn:last-child {
+            border-right: none;
+        }
+
+        .tab-btn:hover {
+            background: rgba(26, 26, 26, 0.05);
+        }
+
+        .tab-btn.active {
+            background: var(--primary-dark);
+            color: white;
+        }
+
+        /* Content Container */
+        .skills-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 3rem 5rem;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Headers */
+        .section-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-intro h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .section-intro p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-bottom: 5rem;
+        }
+
+        .skill-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-card:hover {
+            border-color: var(--accent-warm);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .skill-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .skill-level {
+            margin-bottom: 1.5rem;
+        }
+
+        .level-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .level-bar {
+            height: 8px;
+            background: var(--border-color);
+            overflow: hidden;
+        }
+
+        .level-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent-cool), var(--accent-warm));
+            transition: width 1s ease-out;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.4rem 0.9rem;
+            background: rgba(212, 165, 116, 0.1);
+            border: 1px solid var(--border-color);
+            font-size: 0.85rem;
+            color: var(--text-primary);
+        }
+
+        /* Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 5rem;
+        }
+
+        .cert-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .cert-card:hover {
+            border-color: var(--accent-warm);
+            transform: translateY(-5px);
+        }
+
+        .cert-badge {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1rem;
+            background: linear-gradient(135deg, var(--accent-cool), var(--accent-warm));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .cert-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-dark);
+        }
+
+        .cert-issuer {
+            color: var(--accent-cool);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cert-date {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        /* Interest Cards (Personal) */
+        .interests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .interest-card {
+            background: white;
+            border: 2px solid var(--border-color);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .interest-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--accent-warm);
+        }
+
+        .interest-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, var(--accent-cool), var(--accent-warm));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .interest-content {
+            padding: 2rem;
+        }
+
+        .interest-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+
+        .interest-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .achievement-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .achievement-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .achievement-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-warm);
+            font-weight: bold;
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background: var(--primary-dark);
+            color: white;
+            padding: 5rem 3rem;
+            text-align: center;
+            margin: 5rem 0;
+        }
+
+        .quote-section blockquote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-style: italic;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+            line-height: 1.5;
+        }
+
+        .quote-author {
+            font-size: 1.1rem;
+            color: var(--accent-warm);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-dark);
+            color: var(--text-secondary);
+            text-align: center;
+            padding: 2rem 3rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            nav ul {
+                display: none;
+            }
+
+            .skills-hero {
+                padding-top: 8rem;
+            }
+
+            .skills-grid,
+            .interests-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tab-navigation {
+                flex-direction: column;
+            }
+
+            .tab-btn {
+                border-right: none;
+                border-bottom: 2px solid var(--primary-dark);
+            }
+
+            .tab-btn:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Your Name</a>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+                <li><a href="index.html#blog">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="skills-hero">
+        <h1>Skills & Interests</h1>
+        <p>
+            A blend of professional expertise and personal passions that shape who I am 
+            and how I approach challenges both in work and life.
+        </p>
+    </section>
+
+    <!-- Tab Navigation -->
+    <div class="tab-navigation">
+        <button class="tab-btn active" data-tab="professional">Professional Skills</button>
+        <button class="tab-btn" data-tab="personal">Personal Interests</button>
+    </div>
+
+    <!-- Professional Skills Tab -->
+    <div class="skills-container">
+        <div class="tab-content active" id="professional">
+            <div class="section-intro">
+                <h2>Professional Expertise</h2>
+                <p>
+                    Technical skills and strategic capabilities developed through years of 
+                    hands-on experience building and scaling digital products and services.
+                </p>
+            </div>
+
+            <!-- Core Skills -->
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>
+                        Implementing AI and machine learning solutions for business automation, 
+                        customer service, content generation, and predictive analytics. Expert 
+                        in GPT integration, RAG systems, and custom AI workflows.
+                    </p>
+                    <div class="skill-level">
+                        <div class="level-label">
+                            <span>Proficiency</span>
+                            <span>Expert (90%)</span>
+                        </div>
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">GPT-4</span>
+                        <span class="skill-tag">LangChain</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">NLP</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔍</div>
+                    <h3>SEO/GEO Consultancy</h3>
+                    <p>
+                        Comprehensive SEO strategy including technical optimization, content 
+                        strategy, link building, and local SEO. Proven track record of increasing 
+                        organic traffic and improving search rankings for diverse clients.
+                    </p>
+                    <div class="skill-level">
+                        <div class="level-label">
+                            <span>Proficiency</span>
+                            <span>Expert (95%)</span>
+                        </div>
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Technical SEO</span>
+                        <span class="skill-tag">Schema Markup</span>
+                        <span class="skill-tag">Google Analytics</span>
+                        <span class="skill-tag">Local SEO</span>
+                        <span class="skill-tag">Content Strategy</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🏗️</div>
+                    <h3>Website & Systems Architecture</h3>
+                    <p>
+                        Designing and building scalable web architectures, microservices, and 
+                        cloud infrastructure. Focus on performance, security, and maintainability 
+                        for high-traffic applications.
+                    </p>
+                    <div class="skill-level">
+                        <div class="level-label">
+                            <span>Proficiency</span>
+                            <span>Advanced (85%)</span>
+                        </div>
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>Digital Marketing</h3>
+                    <p>
+                        End-to-end digital marketing including paid advertising, email campaigns, 
+                        marketing automation, conversion optimization, and analytics. Data-driven 
+                        approach to maximize ROI and customer acquisition.
+                    </p>
+                    <div class="skill-level">
+                        <div class="level-label">
+                            <span>Proficiency</span>
+                            <span>Advanced (88%)</span>
+                        </div>
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 88%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Google Ads</span>
+                        <span class="skill-tag">Facebook Ads</span>
+                        <span class="skill-tag">HubSpot</span>
+                        <span class="skill-tag">Email Marketing</span>
+                        <span class="skill-tag">A/B Testing</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🔗</div>
+                    <h3>System Integrations</h3>
+                    <p>
+                        Building custom integrations between business systems, APIs, and third-party 
+                        services. Automating workflows and eliminating data silos across organizations 
+                        using modern integration platforms.
+                    </p>
+                    <div class="skill-level">
+                        <div class="level-label">
+                            <span>Proficiency</span>
+                            <span>Expert (92%)</span>
+                        </div>
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 92%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Webhooks</span>
+                        <span class="skill-tag">Zapier</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">OAuth</span>
+                    </div>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Web Development</h3>
+                    <p>
+                        Full-stack web development with modern frameworks and technologies. 
+                        Building responsive, accessible, and performant web applications with 
+                        clean, maintainable code.
+                    </p>
+                    <div class="skill-level">
+                        <div class="level-label">
+                            <span>Proficiency</span>
+                            <span>Advanced (87%)</span>
+                        </div>
+                        <div class="level-bar">
+                            <div class="level-fill" style="width: 87%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">TypeScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="section-intro">
+                <h2>Certifications & Credentials</h2>
+                <p>Professional certifications that validate expertise and commitment to continuous learning.</p>
+            </div>
+
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-badge">🎓</div>
+                    <h4>Google Analytics Certified</h4>
+                    <div class="cert-issuer">Google</div>
+                    <div class="cert-date">Valid through 2026</div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge">🎓</div>
+                    <h4>AWS Solutions Architect</h4>
+                    <div class="cert-issuer">Amazon Web Services</div>
+                    <div class="cert-date">Valid through 2026</div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge">🎓</div>
+                    <h4>HubSpot Inbound Certified</h4>
+                    <div class="cert-issuer">HubSpot Academy</div>
+                    <div class="cert-date">Valid through 2026</div>
+                </div>
+
+                <div class="cert-card">
+                    <div class="cert-badge">🎓</div>
+                    <h4>Meta Blueprint Certified</h4>
+                    <div class="cert-issuer">Meta (Facebook)</div>
+                    <div class="cert-date">Valid through 2026</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Personal Interests Tab -->
+        <div class="tab-content" id="personal">
+            <div class="section-intro">
+                <h2>Personal Passions</h2>
+                <p>
+                    Beyond the professional realm, these pursuits fuel my energy, teach resilience, 
+                    and provide perspective. They shape how I approach challenges in all areas of life.
+                </p>
+            </div>
+
+            <div class="interests-grid">
+                <div class="interest-card">
+                    <div class="interest-image">🏊‍♂️🚴‍♂️🏃‍♂️</div>
+                    <div class="interest-content">
+                        <h3>Triathlons</h3>
+                        <p>
+                            Competing in triathlons has taught me discipline, time management, and 
+                            the power of consistent incremental progress. The multi-sport challenge 
+                            mirrors the multifaceted nature of complex projects.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Completed 5 Olympic distance triathlons</li>
+                            <li>Finished first Half Ironman in 2024</li>
+                            <li>Training for full Ironman in 2026</li>
+                            <li>Active member of local tri club</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-image">⛰️</div>
+                    <div class="interest-content">
+                        <h3>Mountaineering</h3>
+                        <p>
+                            Mountain climbing embodies strategic planning, risk assessment, and 
+                            teamwork under pressure. Each summit represents months of preparation 
+                            and mental fortitude—skills directly applicable to ambitious projects.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Summited Mount Rainier (14,411 ft)</li>
+                            <li>Multiple alpine climbing expeditions</li>
+                            <li>Certified in wilderness first aid</li>
+                            <li>Leading beginner mountaineering trips</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-image">⛷️</div>
+                    <div class="interest-content">
+                        <h3>Skiing</h3>
+                        <p>
+                            Whether carving through powder or navigating challenging terrain, skiing 
+                            demands split-second decision-making and adaptability. It's where I find 
+                            flow state and recharge my creative energy.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>20+ years skiing experience</li>
+                            <li>Expert-level downhill skier</li>
+                            <li>Backcountry skiing certified</li>
+                            <li>Annual ski trips to multiple resorts</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="interest-card">
+                    <div class="interest-image">🥾</div>
+                    <div class="interest-content">
+                        <h3>Hiking</h3>
+                        <p>
+                            Long-distance hiking provides space for reflection, problem-solving, and 
+                            connecting with nature. Many of my best ideas emerge during multi-day 
+                            treks through wilderness areas.
+                        </p>
+                        <ul class="achievement-list">
+                            <li>Completed portions of Pacific Crest Trail</li>
+                            <li>Hiked in 15+ national parks</li>
+                            <li>Regular weekend backpacking trips</li>
+                            <li>Leave No Trace certified</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quote Section -->
+            <div class="quote-section">
+                <blockquote>
+                    "The mountains are calling and I must go."
+                </blockquote>
+                <div class="quote-author">— John Muir</div>
+            </div>
+
+            <!-- Connection Section -->
+            <div class="section-intro" style="margin-top: 5rem;">
+                <h2>How Passions Inform Professional Work</h2>
+                <p style="max-width: 900px; margin: 1rem auto 0;">
+                    These pursuits aren't separate from my professional life—they're integral to it. 
+                    Triathlons teach me about sustained effort and pacing. Mountaineering reinforces 
+                    the importance of preparation and calculated risk. Skiing demands presence and 
+                    adaptability. Hiking provides clarity and perspective. Together, they make me a 
+                    better problem-solver, teammate, and leader.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Tab switching
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetTab = button.getAttribute('data-tab');
+                
+                // Remove active class from all buttons and contents
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                button.classList.add('active');
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
