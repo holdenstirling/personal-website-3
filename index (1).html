@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holden Stirling Ottolini - Co-Founder & COO | Multi-Location Strategy Expert</title>
+    <meta name="description" content="Holden Ottolini - Co-Founder & COO at Arc4. Multi-location digital strategy expert, Ironman finisher, and speaker on enterprise scaling and client retention.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            /* Dark Green Theme */
+            --primary-green: #065f46;
+            --primary-teal: #0d9488;
+            --accent-emerald: #10b981;
+            --accent-lime: #84cc16;
+            --dark-forest: #064e3b;
+            --deep-green: #022c22;
+            
+            /* Neutrals */
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --bg-tertiary: #f3f4f6;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --text-tertiary: #9ca3af;
+            --border-color: #e5e7eb;
+            
+            /* Typography */
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            
+            /* Spacing */
+            --section-padding: 8rem 2rem;
+            --container-max: 1400px;
+        }
+        
+        /* Dark Mode */
+        body.dark-mode {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --bg-tertiary: #111111;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-tertiary: #999999;
+            --border-color: #222222;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            line-height: 1.6;
+            background: var(--bg-primary);
+            transition: background 0.3s ease, color 0.3s ease;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* HEADER */
+        header {
+            background: var(--deep-green);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        body.dark-mode header {
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid #222222;
+        }
+        .header-container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-left {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .header-contact a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .header-contact a:hover {
+            color: var(--accent-lime);
+        }
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .header-nav a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s;
+            position: relative;
+        }
+        .header-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-lime);
+            transition: width 0.3s;
+        }
+        .header-nav a:hover::after {
+            width: 100%;
+        }
+        .header-nav a:hover {
+            color: var(--accent-lime);
+        }
+        .dark-mode-toggle {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            font-family: var(--font-body);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .dark-mode-toggle:hover {
+            background: var(--accent-emerald);
+            border-color: var(--accent-emerald);
+        }
+        
+        /* HERO SECTION */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 8rem 2rem 6rem;
+            margin-top: 60px;
+            background: linear-gradient(135deg, #022c22 0%, #064e3b 30%, #065f46 60%, #0d9488 100%);
+            overflow: hidden;
+        }
+        body.dark-mode .hero {
+            background: #000000;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+            top: -300px;
+            right: -200px;
+            animation: float 20s ease-in-out infinite;
+        }
+        body.dark-mode .hero::before {
+            display: none;
+        }
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(50px, 50px) rotate(5deg); }
+        }
+        .hero-content {
+            max-width: 1000px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.5rem;
+            background: rgba(16, 185, 129, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            color: #84cc16;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(132, 204, 22, 0.3);
+        }
+        body.dark-mode .hero-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 10vw, 6.5rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+        .hero h1 .accent-text {
+            background: linear-gradient(135deg, #ffffff 0%, #84cc16 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            font-style: italic;
+        }
+        body.dark-mode .hero h1 .accent-text {
+            background: white;
+            -webkit-background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+        .hero-description {
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 800px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            max-width: 600px;
+            margin: 3rem auto;
+        }
+        .stat-item {
+            text-align: center;
+        }
+        .stat-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: 800;
+            font-family: var(--font-display);
+            color: #84cc16;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+        body.dark-mode .stat-number {
+            color: white;
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.8);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .cta-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 1rem 2.5rem;
+            text-decoration: none;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-radius: 12px;
+        }
+        .btn-primary {
+            background: white;
+            color: var(--primary-green);
+            border: 2px solid white;
+        }
+        body.dark-mode .btn-primary {
+            color: black;
+        }
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        .btn-secondary:hover {
+            background: white;
+            color: var(--primary-green);
+            transform: translateY(-3px);
+        }
+        body.dark-mode .btn-secondary:hover {
+            color: black;
+        }
+        
+        /* SECTION STYLING */
+        section {
+            padding: var(--section-padding);
+        }
+        .section-container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+        .section-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--primary-green);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        body.dark-mode .section-label {
+            color: white;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            text-align: center;
+            color: var(--text-primary);
+            margin-bottom: 3rem;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+        
+        /* ABOUT SECTION WITH HEADSHOT */
+        .about-intro-section {
+            background: var(--bg-primary);
+            padding: 6rem 2rem;
+        }
+        .about-intro-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+        .headshot-container {
+            position: relative;
+        }
+        .headshot {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s;
+        }
+        .headshot:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.2);
+        }
+        .headshot-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background: linear-gradient(135deg, rgba(6, 95, 70, 0.1), rgba(16, 185, 129, 0.1));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        body.dark-mode .headshot-overlay {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+        }
+        .headshot-container:hover .headshot-overlay {
+            opacity: 1;
+        }
+        .about-intro-content h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+        .about-intro-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        .about-intro-content p:last-of-type {
+            margin-bottom: 2rem;
+        }
+        .about-intro-quote {
+            font-style: italic;
+            font-size: 1.15rem;
+            color: var(--primary-green);
+            border-left: 4px solid var(--accent-emerald);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+        }
+        body.dark-mode .about-intro-quote {
+            color: white;
+            border-left-color: white;
+        }
+        
+        /* CAREER TIMELINE */
+        .timeline-section {
+            background: var(--bg-secondary);
+        }
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            padding-left: 80px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, 
+                var(--accent-emerald) 0%, 
+                var(--primary-teal) 50%,
+                var(--accent-lime) 100%);
+            border-radius: 2px;
+        }
+        body.dark-mode .timeline::before {
+            background: linear-gradient(to bottom, white 0%, #666 100%);
+        }
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+            opacity: 0;
+            animation: slideInTimeline 0.6s ease-out forwards;
+        }
+        .timeline-item:nth-child(1) { animation-delay: 0.1s; }
+        .timeline-item:nth-child(2) { animation-delay: 0.2s; }
+        .timeline-item:nth-child(3) { animation-delay: 0.3s; }
+        .timeline-item:nth-child(4) { animation-delay: 0.4s; }
+        @keyframes slideInTimeline {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -58px;
+            top: 8px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent-emerald);
+            border: 4px solid var(--bg-secondary);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.2);
+            z-index: 1;
+            transition: all 0.3s;
+        }
+        body.dark-mode .timeline-dot {
+            background: white;
+            box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.2);
+        }
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.3);
+            box-shadow: 0 0 0 8px rgba(16, 185, 129, 0.3);
+        }
+        body.dark-mode .timeline-item:hover .timeline-dot {
+            box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.3);
+        }
+        .timeline-content {
+            background: var(--bg-primary);
+            padding: 2rem 2.5rem;
+            border-radius: 16px;
+            border: 2px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent-emerald), var(--accent-lime));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        body.dark-mode .timeline-content::before {
+            background: white;
+        }
+        .timeline-content:hover::before {
+            opacity: 1;
+        }
+        .timeline-content:hover {
+            transform: translateX(12px) translateY(-4px);
+            border-color: var(--primary-green);
+            box-shadow: 0 20px 60px rgba(6, 95, 70, 0.15);
+        }
+        body.dark-mode .timeline-content:hover {
+            border-color: white;
+            box-shadow: 0 20px 60px rgba(255, 255, 255, 0.1);
+        }
+        .timeline-date {
+            font-size: 0.85rem;
+            color: var(--primary-green);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 50px;
+        }
+        body.dark-mode .timeline-date {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .timeline-title {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        .timeline-company {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .company-name {
+            color: var(--primary-green);
+        }
+        body.dark-mode .company-name {
+            color: white;
+        }
+        .company-logo {
+            height: 28px;
+            width: auto;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+        .timeline-content:hover .company-logo {
+            opacity: 1;
+        }
+        .timeline-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            font-size: 1.05rem;
+        }
+        .timeline-achievements {
+            list-style: none;
+            margin-top: 1.25rem;
+            display: grid;
+            gap: 0.75rem;
+        }
+        .timeline-achievements li {
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        .timeline-achievements li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent-emerald);
+            font-weight: bold;
+            font-size: 1.1rem;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(16, 185, 129, 0.1);
+            border-radius: 50%;
+        }
+        body.dark-mode .timeline-achievements li::before {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .combined-roles {
+            background: var(--bg-tertiary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+            border-left: 3px solid var(--accent-emerald);
+        }
+        body.dark-mode .combined-roles {
+            border-left-color: white;
+        }
+        .role-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        .role-title {
+            font-weight: 600;
+            color: var(--text-primary);
+            font-size: 1.05rem;
+        }
+        .role-date {
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+            font-weight: 600;
+        }
+        .role-divider {
+            height: 1px;
+            background: var(--border-color);
+            margin: 1rem 0;
+        }
+        
+        /* SPEAKING SECTION */
+        .speaking-section {
+            background: var(--bg-primary);
+        }
+        .speaking-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        .speaking-card {
+            background: var(--bg-secondary);
+            padding: 2.5rem;
+            border-radius: 16px;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s;
+        }
+        .speaking-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-green);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        body.dark-mode .speaking-card:hover {
+            border-color: white;
+        }
+        .speaking-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .speaking-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .speaking-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .speaking-topics {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        .topic-tag {
+            padding: 0.4rem 1rem;
+            background: var(--bg-primary);
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+        
+        /* CONSULTANCY SECTION */
+        .consultancy-section {
+            background: var(--bg-secondary);
+        }
+        .consultancy-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .consultancy-card {
+            background: var(--bg-primary);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 2px solid var(--border-color);
+        }
+        .consultancy-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--accent-emerald), var(--accent-lime));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        body.dark-mode .consultancy-icon {
+            background: white;
+        }
+        .consultancy-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        .consultancy-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+        .consultancy-list {
+            list-style: none;
+        }
+        .consultancy-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+        .consultancy-list li:last-child {
+            border-bottom: none;
+        }
+        
+        /* BLOG SECTION */
+        .blog-section {
+            background: var(--bg-primary);
+        }
+        .blog-filters {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0 4rem;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 0.75rem 2rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            color: var(--text-primary);
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: var(--font-body);
+            transition: all 0.3s;
+        }
+        .filter-btn:hover {
+            border-color: var(--primary-green);
+            transform: translateY(-2px);
+        }
+        body.dark-mode .filter-btn:hover {
+            border-color: white;
+        }
+        .filter-btn.active {
+            background: var(--primary-green);
+            color: white;
+            border-color: var(--primary-green);
+        }
+        body.dark-mode .filter-btn.active {
+            background: white;
+            color: black;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+        .blog-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 16px;
+            transition: all 0.4s;
+        }
+        .blog-card.hidden {
+            display: none;
+        }
+        .blog-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-green);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+        }
+        body.dark-mode .blog-card:hover {
+            border-color: white;
+        }
+        .blog-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+        }
+        .blog-tag.professional {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+        body.dark-mode .blog-tag.professional {
+            background: #1e3a8a;
+            color: #dbeafe;
+        }
+        .blog-tag.personal {
+            background: #fce7f3;
+            color: #be185d;
+        }
+        body.dark-mode .blog-tag.personal {
+            background: #831843;
+            color: #fce7f3;
+        }
+        .blog-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+        .blog-card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        .blog-card a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: gap 0.3s;
+        }
+        body.dark-mode .blog-card a {
+            color: white;
+        }
+        .blog-card a:hover {
+            gap: 1rem;
+        }
+        
+        /* RESUME CTA SECTION */
+        .resume-cta-section {
+            background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #065f46 100%);
+            color: white;
+            text-align: center;
+        }
+        body.dark-mode .resume-cta-section {
+            background: var(--bg-secondary);
+        }
+        body.dark-mode .resume-cta-section * {
+            color: var(--text-primary) !important;
+        }
+        .resume-cta-section .section-title {
+            color: white;
+        }
+        .resume-cta-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* CONTACT SECTION */
+        .contact-section {
+            background: var(--bg-primary);
+        }
+        .contact-form {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-secondary);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid var(--border-color);
+        }
+        .form-group {
+            margin-bottom: 2rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            transition: border-color 0.3s;
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+        }
+        body.dark-mode .form-group input:focus,
+        body.dark-mode .form-group textarea:focus {
+            border-color: white;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 1.25rem;
+            background: var(--primary-green);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        body.dark-mode .submit-btn {
+            background: white;
+            color: black;
+        }
+        .submit-btn:hover {
+            background: var(--dark-forest);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* FOOTER */
+        footer {
+            background: var(--deep-green);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        body.dark-mode footer {
+            background: #000000;
+            border-top: 1px solid #222222;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 1200px) {
+            .consultancy-grid {
+                grid-template-columns: 1fr;
+            }
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .about-intro-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            .headshot-container {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+        @media (max-width: 768px) {
+            header {
+                position: relative;
+            }
+            .hero {
+                margin-top: 0;
+            }
+            .header-nav {
+                display: none;
+            }
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            .timeline {
+                padding-left: 40px;
+            }
+            .timeline::before {
+                left: 10px;
+            }
+            .timeline-dot {
+                left: -38px;
+            }
+            .speaking-grid {
+                grid-template-columns: 1fr;
+            }
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="header-contact">
+                    <a href="/cdn-cgi/l/email-protection#c7afa8aba3a2a9b4b3aeb5abaea9a087a0aaa6aeabe9a4a8aa"><span class="__cf_email__" data-cfemail="e88087848c8d869b9c819a8481868fa88f85898184c68b8785">[email&#160;protected]</span></a>
+                </div>
+                <ul class="header-nav">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#timeline">Career</a></li>
+                    <li><a href="#speaking">Speaking</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <button id="darkModeToggle" class="dark-mode-toggle">
+                <span>🌙</span>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🎯</span>
+                <span>Available for Speaking Engagements</span>
+            </div>
+            <h1>
+                Holden Stirling
+                <span class="accent-text">Ottolini</span>
+            </h1>
+            <p class="hero-subtitle">Co-Founder & COO at Arc4 | Former Yext Sr. Solutions Architect</p>
+            <p class="hero-description">
+                10+ years scaling SaaS and web platform companies. Built Arc4 from 0 to 27 people with 96% client retention. 
+                Former Yext Solutions Architect architecting custom AI search solutions. Ironman finisher, mountaineer, and speaker 
+                on enterprise scaling and sustainable performance.
+            </p>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number">10+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Enterprise Projects</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">96%</span>
+                    <span class="stat-label">Client Retention</span>
+                </div>
+            </div>
+            
+            <div class="cta-group">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Book Speaking</span>
+                    <span>→</span>
+                </a>
+                <a href="#timeline" class="btn btn-secondary">
+                    <span>View Career</span>
+                    <span>→</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span>Contact Me</span>
+                    <span>→</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT INTRO SECTION WITH HEADSHOT -->
+    <section class="about-intro-section" id="about">
+        <div class="about-intro-container">
+            <div class="headshot-container">
+                <img src="headshot.jpg" alt="Holden Stirling Ottolini" class="headshot">
+                <div class="headshot-overlay"></div>
+            </div>
+            <div class="about-intro-content">
+                <h2>About Me</h2>
+                <p>
+                    I'm an entrepreneurial operator and digital strategy leader with 10+ years of experience 
+                    scaling SaaS and web platform companies. After nearly a decade at Yext—progressing from 
+                    Enterprise Sales Coordinator to Senior Solutions Architect—I co-founded Arc4 in 2023.
+                </p>
+                <p>
+                    At Arc4, we've grown from 0 to 27 people in 18 months, delivering 50+ implementations for 
+                    Fortune 500 clients while maintaining a 96% retention rate. My technical background in AI 
+                    search architecture combined with operational expertise allows me to bridge the gap between 
+                    complex technology and business outcomes.
+                </p>
+                <div class="about-intro-quote">
+                    "Climbing mountains, racing triathlons, and immersing myself in new cultures have taught me 
+                    what business can't: humility, endurance, and perspective."
+                </div>
+                <p>
+                    Outside of work, I'm an Ironman finisher, mountaineer, and solo traveler. I believe the 
+                    discipline required for endurance sports translates directly to building sustainable businesses 
+                    and high-performing teams.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CAREER TIMELINE SECTION -->
+    <section class="timeline-section" id="timeline">
+        <div class="section-container">
+            <div class="section-label">Professional Journey</div>
+            <h2 class="section-title">Career Timeline</h2>
+            <p class="section-subtitle">
+                10+ years from Enterprise Sales Coordinator to Sr. Solutions Architect at Yext, 
+                then Co-Founder & COO at Arc4
+            </p>
+            
+            <div class="timeline">
+                <!-- Arc4 Role -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">August 2023 — Present</div>
+                        <h3 class="timeline-title">Chief Operating Officer & Co-Founder</h3>
+                        <div class="timeline-company">
+                            <span class="company-name">Arc4</span>
+                            <span style="font-size: 0.9rem; color: var(--text-tertiary); font-weight: 400;">Digital Consultancy</span>
+                        </div>
+                        <p class="timeline-description">
+                            Scaled the team from 0 to 27 people (10 FTE + 17 contractors). Built infrastructure, 
+                            hiring processes, and internal systems from the ground up including Implementation and 
+                            Services frameworks.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Delivered 50+ web and IT implementations for Fortune 500 companies</li>
+                            <li>Maintained 96% client retention rate (industry avg: 70%)</li>
+                            <li>70% of revenue from strategic upsells and expansion opportunities</li>
+                            <li>Built cross-functional teams: Engineering, Operations, Design, PM, SEO</li>
+                            <li>Developed SOPs, resource planning, and capacity modules for scalable growth</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Yext Combined Roles -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">September 2015 — July 2023 (8 Years)</div>
+                        <h3 class="timeline-title">Multiple Roles — Career Progression</h3>
+                        <div class="timeline-company">
+                            <span class="company-name">Yext</span>
+                            <span style="font-size: 0.9rem; color: var(--text-tertiary); font-weight: 400;">AI Search Platform</span>
+                        </div>
+                        <p class="timeline-description">
+                            Progressed through 6 roles over 8 years at Yext, from Enterprise Sales Coordinator to 
+                            Senior Solutions Architect. Built deep expertise in AI search, website architecture, and 
+                            technical solutions for multi-location brands.
+                        </p>
+                        
+                        <!-- Condensed Role Cards -->
+                        <div class="combined-roles">
+                            <div class="role-header">
+                                <span class="role-title">Senior Solutions Architect</span>
+                                <span class="role-date">Oct 2021 — July 2023</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                                Architected custom AI search solutions for Fortune 500 brands. Subject matter expert 
+                                on Yext's platform architecture and search algorithms.
+                            </p>
+                            
+                            <div class="role-divider"></div>
+                            
+                            <div class="role-header">
+                                <span class="role-title">Solutions Architect</span>
+                                <span class="role-date">Mar 2021 — Sept 2021</span>
+                            </div>
+                            
+                            <div class="role-divider"></div>
+                            
+                            <div class="role-header">
+                                <span class="role-title">Solutions Engineer – Partnerships</span>
+                                <span class="role-date">Nov 2020 — Feb 2021</span>
+                            </div>
+                            
+                            <div class="role-divider"></div>
+                            
+                            <div class="role-header">
+                                <span class="role-title">Associate Solutions Engineer – Partnerships</span>
+                                <span class="role-date">Sept 2019 — Nov 2020</span>
+                            </div>
+                            
+                            <div class="role-divider"></div>
+                            
+                            <div class="role-header">
+                                <span class="role-title">Technical Project Manager</span>
+                                <span class="role-date">Feb 2017 — Sept 2019</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                                Managed technical implementations and coordinated cross-functional delivery teams 
+                                for enterprise clients. Built foundational technical expertise.
+                            </p>
+                            
+                            <div class="role-divider"></div>
+                            
+                            <div class="role-header">
+                                <span class="role-title">Enterprise Sales Coordinator</span>
+                                <span class="role-date">Sept 2015 — Feb 2017</span>
+                            </div>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.5rem;">
+                                First role at Yext. Supported enterprise sales team and learned the platform. 
+                                Promoted to Technical Project Manager in 18 months.
+                            </p>
+                        </div>
+                        
+                        <ul class="timeline-achievements" style="margin-top: 1.5rem;">
+                            <li>Progressed through 6 roles in 8 years — from Coordinator to Senior Architect</li>
+                            <li>Deep expertise in AI search algorithms and infrastructure</li>
+                            <li>Designed custom enterprise solutions for Fortune 500 brands</li>
+                            <li>Led implementations across healthcare, retail, and franchise verticals</li>
+                            <li>Built relationships that led to founding Arc4</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Meta Role -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">May 2015 — September 2015</div>
+                        <h3 class="timeline-title">Global Solutions Analyst (Advertising Intern)</h3>
+                        <div class="timeline-company">
+                            <span class="company-name">Meta (Facebook)</span>
+                            <span style="font-size: 0.9rem; color: var(--text-tertiary); font-weight: 400;">New York, NY</span>
+                        </div>
+                        <p class="timeline-description">
+                            Summer internship with Meta's Global Solutions team, working on advertising products 
+                            and client solutions during final semester before graduation.
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Worked with advertising products and client solutions</li>
+                            <li>Gained experience at one of the world's leading tech companies</li>
+                            <li>Developed foundational skills in digital advertising</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education/Background -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Graduated May 2015</div>
+                        <h3 class="timeline-title">Bachelor of Science in Management</h3>
+                        <div class="timeline-company">
+                            <span class="company-name">Binghamton University, SUNY</span>
+                            <span style="font-size: 0.9rem; color: var(--text-tertiary); font-weight: 400;">School of Management</span>
+                        </div>
+                        <p class="timeline-description">
+                            Concentrations in Marketing and Consulting
+                        </p>
+                        <ul class="timeline-achievements">
+                            <li>Volunteer for Community of Hope — 3+ years mentoring program</li>
+                            <li>Developed foundation in business strategy and marketing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SPEAKING SECTION -->
+    <section class="speaking-section" id="speaking">
+        <div class="section-container">
+            <div class="section-label">Speaking & Events</div>
+            <h2 class="section-title">Available for Speaking Engagements</h2>
+            <p class="section-subtitle">
+                I speak on topics ranging from enterprise scaling to personal endurance. Available for conferences, 
+                podcasts, and corporate events.
+            </p>
+            
+            <div class="speaking-grid">
+                <div class="speaking-card">
+                    <div class="speaking-icon">🎤</div>
+                    <h3>Enterprise Topics</h3>
+                    <p>
+                        Insights from building Arc4 and architecting Yext solutions for 50+ Fortune 500 brands. 
+                        Focus on retention, scaling, and technical leadership.
+                    </p>
+                    <div class="speaking-topics">
+                        <span class="topic-tag">Client Retention</span>
+                        <span class="topic-tag">Enterprise Scaling</span>
+                        <span class="topic-tag">Technical Architecture</span>
+                        <span class="topic-tag">Building Teams</span>
+                    </div>
+                </div>
+
+                <div class="speaking-card">
+                    <div class="speaking-icon">💪</div>
+                    <h3>Personal Development</h3>
+                    <p>
+                        Lessons from Ironman training, solo travel, and balancing entrepreneurship with 
+                        personal pursuits. Focus on sustainable performance.
+                    </p>
+                    <div class="speaking-topics">
+                        <span class="topic-tag">Ironman Training</span>
+                        <span class="topic-tag">Work-Life Integration</span>
+                        <span class="topic-tag">Mental Resilience</span>
+                        <span class="topic-tag">Solo Travel</span>
+                    </div>
+                </div>
+
+                <div class="speaking-card">
+                    <div class="speaking-icon">🎯</div>
+                    <h3>Industry Insights</h3>
+                    <p>
+                        Deep expertise in AI search, website architecture, and technical solutions for 
+                        multi-location brands.
+                    </p>
+                    <div class="speaking-topics">
+                        <span class="topic-tag">AI Search</span>
+                        <span class="topic-tag">Website Architecture</span>
+                        <span class="topic-tag">Technical Solutions</span>
+                        <span class="topic-tag">SaaS Platforms</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="btn btn-primary">Request Speaking Engagement</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOG SECTION -->
+    <section class="blog-section" id="blog">
+        <div class="section-container">
+            <div class="section-label">Insights & Stories</div>
+            <h2 class="section-title">Recent Articles</h2>
+            
+            <div class="blog-filters">
+                <button class="filter-btn active" data-filter="all">All Posts</button>
+                <button class="filter-btn" data-filter="professional">Professional</button>
+                <button class="filter-btn" data-filter="personal">Personal</button>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Professional Posts -->
+                <div class="blog-card" data-category="professional">
+                    <span class="blog-tag professional">Professional</span>
+                    <h3>Local Landing Pages for Multi-Location Brands</h3>
+                    <p>What separates winners from those leaving revenue on the table.</p>
+                    <a href="blog-local-landing-pages.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="professional">
+                    <span class="blog-tag professional">Professional</span>
+                    <h3>Hidden Costs of Bad Website Architecture</h3>
+                    <p>How bad architecture costs enterprises $300K+ annually.</p>
+                    <a href="blog-website-architecture.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="professional">
+                    <span class="blog-tag professional">Professional</span>
+                    <h3>Client Retention at Scale</h3>
+                    <p>How we achieved 96% retention by focusing on outcomes.</p>
+                    <a href="blog-client-retention.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="professional">
+                    <span class="blog-tag professional">Professional</span>
+                    <h3>Enterprise Scaling Strategies</h3>
+                    <p>Growing from 0 to 27 people while maintaining quality.</p>
+                    <a href="blog-enterprise-scaling.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="professional">
+                    <span class="blog-tag professional">Professional</span>
+                    <h3>AI Search & Local SEO</h3>
+                    <p>How AI-powered search transforms local discovery.</p>
+                    <a href="blog-ai-search.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="professional">
+                    <span class="blog-tag professional">Professional</span>
+                    <h3>From Yext to Arc4</h3>
+                    <p>Why we left corporate and what we learned.</p>
+                    <a href="blog-yext-to-arc4.html">Read More →</a>
+                </div>
+                
+                <!-- Personal Posts -->
+                <div class="blog-card" data-category="personal">
+                    <span class="blog-tag personal">Personal</span>
+                    <h3>90 Days Away: Solo Travel</h3>
+                    <p>The mindset shift from three months on the road.</p>
+                    <a href="blog-90-days-solo-travel.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="personal">
+                    <span class="blog-tag personal">Personal</span>
+                    <h3>89 Days in Europe</h3>
+                    <p>What Europe taught me about connection.</p>
+                    <a href="blog-89-days-europe.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="personal">
+                    <span class="blog-tag personal">Personal</span>
+                    <h3>Ironman & Business Lessons</h3>
+                    <p>Sustainable performance in business and life.</p>
+                    <a href="blog-ironman-business-lessons.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="personal">
+                    <span class="blog-tag personal">Personal</span>
+                    <h3>Ironman for Suicide Prevention</h3>
+                    <p>Racing to raise $12K and what it taught me.</p>
+                    <a href="blog-ironman-suicide-prevention.html">Read More →</a>
+                </div>
+                
+                <div class="blog-card" data-category="personal">
+                    <span class="blog-tag personal">Personal</span>
+                    <h3>Mountains & Business Philosophy</h3>
+                    <p>Mountaineering lessons for sustainable businesses.</p>
+                    <a href="blog-mountains-business-philosophy.html">Read More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESUME CTA SECTION -->
+    <section class="resume-cta-section">
+        <div class="section-container">
+            <h2 class="section-title">Full Resume Available</h2>
+            <p class="section-subtitle">
+                Detailed career history, project portfolio, and references available upon request
+            </p>
+            <a href="#contact" class="btn btn-primary">Request Resume</a>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
+        <div class="section-container">
+            <div class="section-label">Get In Touch</div>
+            <h2 class="section-title">Contact Me</h2>
+            <p class="section-subtitle">
+                Interested in speaking, consulting, or collaboration? Let's connect.
+            </p>
+            
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="name">Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="Speaking, Consulting, or General Inquiry">
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Holden Stirling Ottolini. All rights reserved.</p>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                const isDark = body.classList.toggle('dark-mode');
+                darkModeToggle.innerHTML = isDark 
+                    ? '<span>☀️</span><span>Light Mode</span>' 
+                    : '<span>🌙</span><span>Dark Mode</span>';
+                localStorage.setItem('darkMode', isDark);
+            });
+
+            if (localStorage.getItem('darkMode') === 'true') {
+                body.classList.add('dark-mode');
+                darkModeToggle.innerHTML = '<span>☀️</span><span>Light Mode</span>';
+            }
+        }
+
+        // Blog Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.dataset.filter;
+                
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                
+                blogCards.forEach(card => {
+                    const category = card.dataset.category;
+                    
+                    if (filter === 'all' || category === filter) {
+                        card.classList.remove('hidden');
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const headerOffset = 80;
+                    const elementPosition = target.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pa

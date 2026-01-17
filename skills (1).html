@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills & Expertise - Holden Ottolini</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary-green: #065f46;
+            --accent-emerald: #10b981;
+            --accent-lime: #84cc16;
+            --deep-green: #022c22;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f9fafb;
+            --text-primary: #111827;
+            --text-secondary: #6b7280;
+            --border-color: #e5e7eb;
+            --font-display: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+        }
+        body.dark-mode {
+            --bg-primary: #000000;
+            --bg-secondary: #0a0a0a;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --border-color: #222222;
+        }
+        body {
+            font-family: var(--font-body);
+            color: var(--text-primary);
+            background: var(--bg-primary);
+            line-height: 1.6;
+        }
+        header {
+            background: var(--deep-green);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        body.dark-mode header {
+            background: rgba(0, 0, 0, 0.95);
+            border-bottom: 1px solid #222;
+        }
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header-left {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        .header-contact a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        .header-nav a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        .header-nav a:hover {
+            color: var(--accent-lime);
+        }
+        .dark-mode-toggle {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s;
+        }
+        .dark-mode-toggle:hover {
+            background: var(--accent-emerald);
+        }
+        .hero {
+            background: linear-gradient(135deg, #022c22 0%, #064e3b 50%, #065f46 100%);
+            color: white;
+            padding: 10rem 2rem 6rem;
+            margin-top: 60px;
+            text-align: center;
+        }
+        body.dark-mode .hero {
+            background: #000;
+        }
+        .hero h1 {
+            font-family: var(--font-display);
+            font-size: clamp(3rem, 8vw, 5rem);
+            margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .skills-section {
+            padding: 8rem 2rem;
+            background: var(--bg-primary);
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--primary-green);
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        body.dark-mode .section-label {
+            color: white;
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 6rem;
+        }
+        .skill-category {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            transition: all 0.4s;
+        }
+        .skill-category:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-green);
+            box-shadow: 0 20px 60px rgba(6,95,70,0.15);
+        }
+        body.dark-mode .skill-category:hover {
+            border-color: white;
+            box-shadow: 0 20px 60px rgba(255,255,255,0.1);
+        }
+        .skill-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+        .skill-category h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+        .skill-list {
+            list-style: none;
+        }
+        .skill-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+        .skill-list li:last-child {
+            border-bottom: none;
+        }
+        .personal-section {
+            background: var(--bg-secondary);
+            padding: 8rem 2rem;
+        }
+        .personal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        .personal-card {
+            background: var(--bg-primary);
+            padding: 3rem;
+            border-radius: 20px;
+            border: 2px solid var(--border-color);
+            transition: all 0.4s;
+        }
+        .personal-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary-green);
+        }
+        body.dark-mode .personal-card:hover {
+            border-color: white;
+        }
+        .personal-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+        .personal-card p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        footer {
+            background: var(--deep-green);
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+        }
+        body.dark-mode footer {
+            background: #000;
+            border-top: 1px solid #222;
+        }
+        @media (max-width: 768px) {
+            .header-nav {
+                display: none;
+            }
+            .skills-grid, .personal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <div class="header-contact">
+                    <a href="mailto:holdenstirling@gmail.com">holdenstirling@gmail.com</a>
+                </div>
+                <ul class="header-nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#timeline">Career</a></li>
+                    <li><a href="index.html#speaking">Speaking</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <button id="darkModeToggle" class="dark-mode-toggle">
+                <span>🌙</span>
+                <span>Dark Mode</span>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Skills & Expertise</h1>
+        <p>
+            Technical and operational expertise across SaaS platforms, AI search, 
+            web architecture, and team leadership.
+        </p>
+    </section>
+
+    <section class="skills-section">
+        <div class="section-container">
+            <div class="section-label">Professional Skills</div>
+            <h2 class="section-title">Technical Capabilities</h2>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">💻</div>
+                    <h3>Development & Technical</h3>
+                    <ul class="skill-list">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>React & Angular Frameworks</li>
+                        <li>Python Development</li>
+                        <li>API Integration & Documentation</li>
+                        <li>Git Version Control</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">🎯</div>
+                    <h3>Platform Expertise</h3>
+                    <ul class="skill-list">
+                        <li>Yext Digital Experience Platform</li>
+                        <li>AI Search Architecture</li>
+                        <li>Headless CMS Systems</li>
+                        <li>Google Analytics 4</li>
+                        <li>Search Engine Optimization</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">📊</div>
+                    <h3>Tools & Systems</h3>
+                    <ul class="skill-list">
+                        <li>JIRA & Project Management</li>
+                        <li>Looker Reporting</li>
+                        <li>Prompt Engineering</li>
+                        <li>Data Analysis & Visualization</li>
+                        <li>Salesforce Integration</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">🏗️</div>
+                    <h3>Architecture & Strategy</h3>
+                    <ul class="skill-list">
+                        <li>Website Architecture Design</li>
+                        <li>Multi-Location Digital Strategy</li>
+                        <li>Local Landing Page Optimization</li>
+                        <li>Technical Solutions Engineering</li>
+                        <li>Enterprise Implementation</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">👥</div>
+                    <h3>Leadership & Operations</h3>
+                    <ul class="skill-list">
+                        <li>Team Building & Management</li>
+                        <li>Cross-Functional Leadership</li>
+                        <li>Client Retention Strategy</li>
+                        <li>Resource Planning & Capacity</li>
+                        <li>SOP Development</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">🤝</div>
+                    <h3>Client Facing</h3>
+                    <ul class="skill-list">
+                        <li>Enterprise Sales & Strategy</li>
+                        <li>Technical Presentations</li>
+                        <li>Stakeholder Management</li>
+                        <li>Requirements Gathering</li>
+                        <li>Executive Communication</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="personal-section">
+        <div class="section-container">
+            <div class="section-label">Beyond Work</div>
+            <h2 class="section-title">Personal Pursuits</h2>
+            
+            <div class="personal-grid">
+                <div class="personal-card">
+                    <div class="skill-icon">🏃</div>
+                    <h3>Ironman Triathlon</h3>
+                    <p>
+                        Completed Ironman Boulder in 11:08:00. Raised over $12,000 for suicide prevention 
+                        through the American Foundation for Suicide Prevention. Training teaches discipline, 
+                        endurance, and the importance of sustainable performance.
+                    </p>
+                </div>
+
+                <div class="personal-card">
+                    <div class="skill-icon">⛰️</div>
+                    <h3>Mountaineering</h3>
+                    <p>
+                        Passionate about alpine climbing and backcountry skiing in the Colorado Rockies. 
+                        The lessons from mountaineering—risk assessment, preparation, and team trust—translate 
+                        directly to business leadership.
+                    </p>
+                </div>
+
+                <div class="personal-card">
+                    <div class="skill-icon">✈️</div>
+                    <h3>Solo Travel</h3>
+                    <p>
+                        Spent 89 days traveling solo through Europe, living in Portugal, Spain, Italy, and 
+                        France. Immersing myself in new cultures teaches adaptability, perspective, and the 
+                        value of stepping outside comfort zones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Holden Stirling Ottolini. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+
+        if (darkModeToggle) {
+            darkModeToggle.addEventListener('click', () => {
+                const isDark = body.classList.toggle('dark-mode');
+                darkModeToggle.innerHTML = isDark 
+                    ? '<span>☀️</span><span>Light Mode</span>' 
+                    : '<span>🌙</span><span>Dark Mode</span>';
+                localStorage.setItem('darkMode', isDark);
+            });
+
+            if (localStorage.getItem('darkMode') === 'true') {
+                body.classList.add('dark-mode');
+                darkModeToggle.innerHTML = '<span>☀️</span><span>Light Mode</span>';
+            }
+        }
+    </script>
+</body>
+</html>
