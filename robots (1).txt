@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Sitemap: https://holdenottolini.com/sitemap.xml
+
+# Disallow admin or private folders if any
+# User-agent: *
+# Disallow: /private/
